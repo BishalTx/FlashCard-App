@@ -9,9 +9,9 @@
 This App is the simple flash card app created using Android studio and ran on emulator. First of all, it displays a question and when user clicks on it, it will display the answer.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+![] (https://github.com/BishalTx/FlashCard-App/raw/main/ezgif.com-gif-maker%20(4).gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://github.com/BishalTx/FlashCard-App/raw/main/ezgif.com-gif-maker%20(4).gif" width=200><br>
 
 
 
