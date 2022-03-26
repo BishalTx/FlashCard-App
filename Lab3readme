@@ -7,9 +7,10 @@ This part of lab allows user to show the next question and answer by getting dat
 
 ### App Walk-though
 
+![](https://i.imgur.com/F5QUVlk.gif
 
-<img s![](https://i.imgur.com/F5QUVlk.gif)
-rc="" width=200><br>
+
+<img src = "![](https://i.imgur.com/F5QUVlk.gif") width=200><br>
 
 ## Required
 - [x ] User can create a card and still see their created card when the app is relaunched.
