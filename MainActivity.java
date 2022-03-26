@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     FlashcardDatabase flashcardDatabase;
     List<Flashcard> allFlashcards;
     int cardIndex = 0;
+ //allFlashcards.deleteAll();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 cardIndex++;
-                if(cardIndex < allFlashcards.size()) {
-                    Flashcard currentCard = allFlashcards.get(cardIndex);
-                    flashcardQuestion.setText((currentCard.getQuestion()));
-                    flashcardAnswer.setText(currentCard.getAnswer());
+                if( cardIndex >= allFlashcards.size()) {
+                    Snackbar.make(v,"you have reached the end of the flashcard",Snackbar.LENGTH_SHORT).show();
+                    cardIndex = 0;
                 }
-
+                Flashcard currentCard = allFlashcards.get(cardIndex);
+                flashcardQuestion.setText((currentCard.getQuestion()));
+                flashcardAnswer.setText(currentCard.getAnswer());
 
 
             }
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        //flashcardDatabase.deleteAll();
         allFlashcards = flashcardDatabase.getAllCards();
         if (allFlashcards != null && allFlashcards.size() > 0) {
             Flashcard firstcard = allFlashcards.get(0);
