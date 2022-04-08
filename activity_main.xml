@@ -5,25 +5,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/flashcard_question_textview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:text="Who is the 44th President of the United States?"
+        android:text="@string/who_is_the_44th_president_of_the_united_states"
+        android:background="#f400a1"
         android:textSize="40sp"
         />
+
+
     <TextView
         android:id="@+id/flashcard_answer_textview"
-       android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center"
         android:text="Barak Obama"
+        android:background="#01b3c7"
         android:textSize="40sp"
-        />
+        android:visibility="invisible" />
 
+    <ImageView
+        android:id="@+id/flashCard_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/icon_add" />
 
+    <ImageView
+        android:id="@+id/flashCard_next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="352dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="296dp"
+        android:src="@drawable/next" />
 
 
 </RelativeLayout>
